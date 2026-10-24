@@ -1,0 +1,287 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f5fb;
+  color: #24243a;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: min(900px, 100% - 32px);
+  margin: 0 auto;
+  padding: 55px 0 25px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #6c5ce7;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 8px 0;
+  font-size: clamp(26px, 5vw, 38px);
+}
+
+.subtitle {
+  color: #77778d;
+  font-size: 14px;
+}
+
+.progress-card,
+.task-panel {
+  background: #fff;
+  border: 1px solid #e9e9f2;
+  border-radius: 16px;
+}
+
+.progress-card {
+  width: 155px;
+  flex-shrink: 0;
+  padding: 17px;
+}
+
+.progress-card span {
+  display: block;
+  color: #77778d;
+  font-size: 12px;
+}
+
+.progress-card strong {
+  display: block;
+  margin: 7px 0;
+  font-size: 26px;
+}
+
+.progress-track {
+  height: 6px;
+  overflow: hidden;
+  background: #eeecfa;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #6c5ce7;
+  border-radius: inherit;
+  transition: width 0.2s ease;
+}
+
+.task-panel {
+  padding: 26px;
+  box-shadow: 0 10px 35px #28204a08;
+}
+
+.task-panel h2 {
+  margin: 0 0 18px;
+  font-size: 19px;
+}
+
+.add-form,
+.toolbar {
+  display: flex;
+  gap: 10px;
+}
+
+.add-form input,
+.toolbar input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  color: #24243a;
+  background: #fbfbfe;
+  border: 1px solid #e4e4ef;
+  border-radius: 9px;
+  outline-color: #8c80f0;
+}
+
+.add-form input {
+  flex: 1;
+}
+
+.primary-button {
+  padding: 12px 17px;
+  color: #fff;
+  background: #6c5ce7;
+  border: 0;
+  border-radius: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.primary-button:hover {
+  background: #5847d0;
+}
+
+.toolbar {
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 12px;
+}
+
+.toolbar > input {
+  max-width: 290px;
+}
+
+.filters {
+  display: flex;
+  gap: 5px;
+}
+
+.filter {
+  padding: 9px 12px;
+  color: #77778d;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.filter.active {
+  color: #6c5ce7;
+  background: #efedff;
+  font-weight: 700;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 17px 2px;
+  border-bottom: 1px solid #efeff5;
+}
+
+.task-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.task-label input {
+  width: 17px;
+  height: 17px;
+  accent-color: #6c5ce7;
+  cursor: pointer;
+}
+
+.task-title {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.task-title.completed {
+  color: #9999a9;
+  text-decoration: line-through;
+}
+
+.delete-button {
+  padding: 7px 10px;
+  color: #d34d61;
+  background: #fff1f3;
+  border: 0;
+  border-radius: 7px;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  background: #ffe2e7;
+}
+
+.empty-state {
+  padding: 28px 0;
+  color: #88889d;
+  font-size: 13px;
+  text-align: center;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  color: #88889d;
+  font-size: 12px;
+}
+
+.clear-button {
+  color: #6c5ce7;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+}
+
+.clear-button:disabled {
+  color: #b8b7c7;
+  cursor: not-allowed;
+}
+
+.app-footer {
+  padding-top: 24px;
+  color: #9999aa;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding-top: 28px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .progress-card {
+    width: 100%;
+  }
+
+  .task-panel {
+    padding: 18px 14px;
+  }
+
+  .add-form,
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primary-button {
+    padding: 13px;
+  }
+
+  .toolbar > input {
+    max-width: none;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+}
