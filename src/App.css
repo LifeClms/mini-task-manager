@@ -285,3 +285,72 @@ h1 {
     flex-wrap: wrap;
   }
 }
+
+
+.auth-panel {
+  width: min(460px, 100%);
+  margin: 40px auto;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #e4e4ef;
+  border-radius: 9px;
+  background: #fbfbfe;
+}
+
+.auth-form button,
+.google-button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.google-button {
+  margin-top: 12px;
+  background: white;
+  border: 1px solid #e4e4ef;
+  color: #24243a;
+  cursor: pointer;
+}
+
+.auth-switch {
+  margin-top: 16px;
+}
+
+.error-message {
+  padding: 12px;
+  color: #b42335;
+  background: #fff1f3;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.success-message {
+  padding: 12px;
+  color: #166534;
+  background: #ecfdf3;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.user-email {
+  color: #77778d;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
